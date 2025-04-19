@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMÉ - Premium Sustainable Eyewear</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B7355',secondary:'#D2B48C'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #F9F6F2;
+}
+h1, h2, h3, .serif {
+font-family: 'Playfair Display', serif;
+}
+.product-card:hover img {
+transform: scale(1.03);
+transition: transform 0.3s ease;
+}
+.product-card img {
+transition: transform 0.3s ease;
+}
+.product-card {
+position: relative;
+overflow: hidden;
+}
+.product-card::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle at center,
+rgba(255, 220, 150, 0) 30%,
+rgba(255, 220, 150, 0.1) 40%,
+rgba(255, 220, 150, 0) 50%
+);
+transform-origin: center;
+animation: rotateRays 8s linear infinite;
+pointer-events: none;
+z-index: 1;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.product-card:hover::before {
+opacity: 1;
+}
+@keyframes rotateRays {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+@keyframes sunrays {
+0% {
+transform: rotate(0deg);
+opacity: 0.3;
+}
+100% {
+transform: rotate(360deg);
+opacity: 0.6;
+}
+}
+.sun-rays {
+position: absolute;
+width: 150%;
+height: 150%;
+background: radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(255, 220, 150, 0.15) 50%, transparent 60%, transparent 100%),
+repeating-conic-gradient(from 0deg, transparent 0deg, rgba(255, 220, 150, 0.1) 10deg, transparent 20deg);
+animation: sunrays 60s linear infinite;
+pointer-events: none;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="w-full bg-white">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="text-3xl font-bold serif">LUMÉ</div>
+<nav class="hidden md:flex space-x-8">
+<a href="https://readdy.ai/home/4310d5f1-1218-463a-8c85-8532ac46144d/8da746a9-ae4d-47cf-a6ed-a812142b3ed0" data-readdy="true" class="text-gray-800 hover:text-primary transition">Collections</a>
+<a href="#" class="text-gray-800 hover:text-primary transition">Sustainability</a>
+<a href="https://readdy.ai/home/4310d5f1-1218-463a-8c85-8532ac46144d/7b64eacb-b68f-4249-8f92-9b69b941556f" data-readdy="true" class="text-gray-800 hover:text-primary transition">About</a>
+<a href="#" class="text-gray-800 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-search-line text-gray-800 ri-lg"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-bag-line text-gray-800 ri-lg"></i>
+</div>
+<div class="w-10 h-10 md:hidden flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line text-gray-800 ri-lg"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=premium%20sustainable%20sunglasses%20on%20neutral%20beige%20background%20with%20soft%20shadows%2C%20minimalist%20luxury%20aesthetic%2C%20high-end%20product%20photography%20with%20natural%20materials%2C%20bamboo%20and%20recycled%20materials%2C%20elegant%20composition%20with%20soft%20lighting%2C%20no%20people%2C%20professional%20product%20photography&width=1600&height=800&seq=12345&orientation=landscape');"></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="sun-rays"></div>
+<div class="relative container mx-auto px-4 h-full flex flex-col justify-center">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-6xl font-light text-white mb-4">Sustainably shaded.<br>Endlessly styled.</h1>
+<p class="text-xl text-white mb-8">Premium eyewear crafted from eco-friendly materials for the conscious consumer.</p>
+<a href="https://readdy.ai/home/4310d5f1-1218-463a-8c85-8532ac46144d/9d4064b8-985d-4ffc-a109-780a1d2d693c" data-readdy="true">
+<button class="bg-white text-gray-900 px-8 py-3 font-medium !rounded-button hover:bg-gray-100 transition whitespace-nowrap">Shop Collection</button>
+</a>
+</div>
+</div>
+</section>
+<!-- Featured Collection -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-light text-center mb-16">Our Signature Collection</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=gold%20round%20metal%20frame%20sunglasses%20with%20green%20lenses%20on%20neutral%20beige%20background%2C%20minimalist%20luxury%20product%20photography%2C%20high-end%20sunglasses%2C%20professional%20lighting%2C%20no%20people&width=600&height=600&seq=12346&orientation=squarish" alt="Solstice Sunglasses" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Solstice</h3>
+<p class="text-gray-600 mb-3">Round, thin metal frame in recycled stainless steel</p>
+<p class="text-lg font-medium">$189.00</p>
+</div>
+<!-- Product 2 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=wayfarer%20style%20sunglasses%20with%20bamboo%20arms%20and%20black%20bio-acetate%20frame%20on%20neutral%20beige%20background%2C%20minimalist%20luxury%20product%20photography%2C%20high-end%20sunglasses%2C%20professional%20lighting%2C%20no%20people&width=600&height=600&seq=12347&orientation=squarish" alt="Driftwood Sunglasses" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Driftwood</h3>
+<p class="text-gray-600 mb-3">Wayfarer-style with bamboo arms and bio-acetate</p>
+<p class="text-lg font-medium">$169.00</p>
+</div>
+<!-- Product 3 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20shield%20lens%20sunglasses%20with%20semi-mirrored%20lenses%20and%20glossy%20recycled%20acetate%20frame%20on%20neutral%20beige%20background%2C%20minimalist%20luxury%20product%20photography%2C%20high-end%20sunglasses%2C%20professional%20lighting%2C%20no%20people&width=600&height=600&seq=12348&orientation=squarish" alt="Flux Sunglasses" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Flux</h3>
+<p class="text-gray-600 mb-3">Shield lens with semi-mirrored glossy recycled acetate</p>
+<p class="text-lg font-medium">$199.00</p>
+</div>
+<!-- Product 4 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=modular%20sunglasses%20with%20clip-on%20base%20and%20swappable%20lenses%20in%20matte%20acetate%20with%20magnetic%20attachments%20on%20neutral%20beige%20background%2C%20minimalist%20luxury%20product%20photography%2C%20high-end%20sunglasses%2C%20professional%20lighting%2C%20no%20people&width=600&height=600&seq=12349&orientation=squarish" alt="Moodshift Sunglasses" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Moodshift</h3>
+<p class="text-gray-600 mb-3">Modular design with 3 swappable magnetic lenses</p>
+<p class="text-lg font-medium">$229.00</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="border border-gray-900 text-gray-900 px-8 py-3 font-medium !rounded-button hover:bg-gray-900 hover:text-white transition whitespace-nowrap">View All Styles</button>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-20 bg-[#F1EBE3]">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+<img src="https://readdy.ai/api/search-image?query=sustainable%20eyewear%20manufacturing%20process%20with%20bamboo%20and%20recycled%20materials%2C%20artisan%20crafting%20premium%20sunglasses%2C%20close-up%20of%20hands%20working%20with%20natural%20materials%2C%20eco-friendly%20production%2C%20professional%20documentary%20style%20photography%2C%20no%20faces%20visible&width=800&height=600&seq=12350&orientation=landscape" alt="Crafting Process" class="w-full h-auto rounded-lg shadow-lg">
+</div>
+<div class="md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-light mb-6">Crafted with Purpose</h2>
+<p class="text-gray-700 mb-6">At LUMÉ, we believe that style shouldn't come at the expense of our planet. Each pair of our eyewear is thoughtfully designed and crafted using sustainable materials like recycled metals, bio-acetate, and responsibly sourced bamboo.</p>
+<p class="text-gray-700 mb-8">Our commitment extends beyond materials – we plant a tree for every purchase and use plastic-free packaging made from recycled paper products.</p>
+<button class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-opacity-90 transition whitespace-nowrap">Our Sustainability Story</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Collection Highlight -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-light text-center mb-6">The Sandstone Collection</h2>
+<p class="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our newest release features tan frames paired with copper, rose, and smoke lenses – inspired by the warm, earthy tones of desert landscapes.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Collection Item 1 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=tan%20frame%20sunglasses%20with%20copper%20lenses%20on%20sandy%20beige%20background%2C%20desert-inspired%20luxury%20eyewear%2C%20premium%20product%20photography%20with%20natural%20lighting%2C%20no%20people%2C%20minimalist%20composition&width=600&height=800&seq=12351&orientation=portrait" alt="Sandstone Copper" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Driftwood - Copper</h3>
+<p class="text-gray-600 mb-3">Tan bamboo frame with copper polarized lenses</p>
+<p class="text-lg font-medium">$169.00</p>
+</div>
+<!-- Collection Item 2 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=tan%20frame%20sunglasses%20with%20rose-tinted%20lenses%20on%20sandy%20beige%20background%2C%20desert-inspired%20luxury%20eyewear%2C%20premium%20product%20photography%20with%20natural%20lighting%2C%20no%20people%2C%20minimalist%20composition&width=600&height=800&seq=12352&orientation=portrait" alt="Sandstone Rose" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Solstice - Rose</h3>
+<p class="text-gray-600 mb-3">Tan metal frame with rose gradient lenses</p>
+<p class="text-lg font-medium">$189.00</p>
+</div>
+<!-- Collection Item 3 -->
+<div class="product-card group bg-white">
+<div class="mb-4 overflow-hidden rounded relative">
+<img src="https://readdy.ai/api/search-image?query=tan%20frame%20sunglasses%20with%20smoke%20gray%20lenses%20on%20sandy%20beige%20background%2C%20desert-inspired%20luxury%20eyewear%2C%20premium%20product%20photography%20with%20natural%20lighting%2C%20no%20people%2C%20minimalist%20composition&width=600&height=800&seq=12353&orientation=portrait" alt="Sandstone Smoke" class="w-full h-auto object-cover">
+</div>
+<h3 class="text-xl font-medium mb-2">Flux - Smoke</h3>
+<p class="text-gray-600 mb-3">Tan recycled acetate with smoke polarized lenses</p>
+<p class="text-lg font-medium">$199.00</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-opacity-90 transition whitespace-nowrap">Shop Sandstone Collection</button>
+</div>
+</div>
+</section>
+<!-- Features -->
+<section class="py-20 bg-[#F9F6F2]">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-light text-center mb-16">Why Choose LUMÉ</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Feature 1 -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-recycle-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-medium mb-3">Sustainable Materials</h3>
+<p class="text-gray-600">Every pair is crafted from recycled metals, bio-acetate, or responsibly sourced bamboo.</p>
+</div>
+<!-- Feature 2 -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-shield-check-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-medium mb-3">Premium Protection</h3>
+<p class="text-gray-600">100% UVA/UVB protection with polarized options for enhanced clarity and reduced glare.</p>
+</div>
+<!-- Feature 3 -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+<i class="ri-heart-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-medium mb-3">Giving Back</h3>
+<p class="text-gray-600">We plant a tree for every purchase and donate 5% of profits to ocean cleanup initiatives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-light text-center mb-16">What Our Customers Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-[#F9F6F2] p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-700 mb-6">"I've been searching for sustainable eyewear that doesn't compromise on style, and LUMÉ delivers exactly that. My Driftwood sunglasses get compliments everywhere I go."</p>
+<p class="font-medium">Emily Richardson</p>
+<p class="text-gray-600 text-sm">Verified Customer</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-[#F9F6F2] p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-700 mb-6">"The Moodshift sunglasses are revolutionary. Being able to swap lenses depending on my outfit or the weather is such a smart concept. Plus, they're incredibly well-made."</p>
+<p class="font-medium">Marcus Johnson</p>
+<p class="text-gray-600 text-sm">Verified Customer</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-[#F9F6F2] p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-700 mb-6">"Not only are these the most comfortable sunglasses I've ever owned, but knowing they're made sustainably makes me feel good about my purchase. The Solstice frames are timeless."</p>
+<p class="font-medium">Alexandra Thompson</p>
+<p class="text-gray-600 text-sm">Verified Customer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-20 bg-primary bg-opacity-10">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-3xl md:text-4xl font-light mb-4">Join Our Community</h2>
+<p class="text-gray-700 max-w-2xl mx-auto mb-8">Subscribe to receive updates on new collections, sustainability initiatives, and exclusive offers.</p>
+<form class="flex flex-col md:flex-row max-w-md mx-auto gap-4">
+<input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border-none rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<button type="submit" class="bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="text-2xl font-bold serif mb-6">LUMÉ</div>
+<p class="text-gray-600 mb-6">Premium sustainable eyewear for the conscious consumer. Your shade. Your story.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:border-primary hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:border-primary hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:border-primary hover:text-primary transition">
+<i class="ri-pinterest-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-6">Shop</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary transition">All Collections</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">New Arrivals</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Bestsellers</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-6">About</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Our Story</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Sustainability</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Materials</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-medium text-lg mb-6">Support</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Contact Us</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Shipping & Returns</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Care Guide</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-200">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-600 text-sm mb-4 md:mb-0">© 2025 LUMÉ. All rights reserved.</p>
+<div class="flex items-center space-x-6">
+<a href="#" class="text-gray-600 hover:text-primary transition text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-600 hover:text-primary transition text-sm">Terms of Service</a>
+<div class="flex items-center space-x-2">
+<i class="ri-visa-line text-gray-600 ri-lg"></i>
+<i class="ri-mastercard-line text-gray-600 ri-lg"></i>
+<i class="ri-paypal-line text-gray-600 ri-lg"></i>
+<i class="ri-apple-fill text-gray-600 ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
